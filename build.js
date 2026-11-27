@@ -101,6 +101,12 @@ const prices=PLACES.map(p=>(FA[p.id]||{}).p).filter(Boolean);
 const P60=med(prices.map(x=>x.k));
 const totalReviews=PLACES.reduce((s,p)=>s+p.reviews,0);
 const BEST_ANSWER=S100?`${TOPL(ranked)}`:'';
+const VARIANTS=[
+ {slug:'best-foot-massage-da-nang',k:'pieds',h1:'Best foot massage in Da Nang',noun:'foot massage',filter:p=>S100.offers(p,'pieds')},
+ {slug:'best-head-spa-massage-da-nang',k:'headspa',h1:'Best head spa and scalp massage in Da Nang',noun:'head spa',filter:p=>S100.offers(p,'headspa')},
+ {slug:'best-hot-stone-massage-da-nang',k:'pierres',h1:'Best hot stone massage in Da Nang',noun:'hot stone massage',filter:p=>S100.offers(p,'pierres')},
+ {slug:'best-massage-near-my-khe-beach',k:'massage_corps',h1:'Best massage near My Khe Beach, for English speakers',noun:'body massage within 1 km of the beach',filter:p=>S100.offers(p,'massage_corps')&&S100.crit(p).c.plage.pts===10},
+];
 
 /* ---------------- HOME ---------------- */
 page('/',
@@ -122,6 +128,8 @@ head(`Massage in Da Nang: ${PLACES.length} Venues Scored Out of 100 (${NOW.getUT
 ${MX(ranked,'en',{limit:10})}
 <h2>The first ten</h2>
 ${list(ranked.slice(0,10))}
+<h2>Rankings by treatment</h2>
+<div class="chips">${VARIANTS.map(v=>`<a class="chip" href="/${v.slug}/">${esc(v.h1)}</a>`).join('')}</div>
 <h2>By treatment</h2>
 <div class="chips">${SERVICES.map(s=>`<a class="chip" href="/services/${s.slug}/">${esc(s.h1)}</a>`).join('')}</div>
 <h2>By neighbourhood</h2>
@@ -169,6 +177,33 @@ ${PLACES.filter(p=>(FA[p.id]||{}).p).sort((a,b)=>FA[a.id].p.k-FA[b.id].p.k).map(
 </tbody></table></div>
 <p class="m">K = 1,000 VND. Prices as published on each venue's website on the date above; a venue may charge differently on the day. Venues whose price list is only on Facebook or Instagram are not read.</p>
 </section>`+footer(),'0.8');
+
+/* ---------------- ONE-TREATMENT RANKINGS (27/11/2026) ----------------
+   Same scale as the city ranking, one change written on each page: the 15
+   points of the range of treatments go in full to the venues whose published
+   menu lists the page's treatment, and to no other. The list holds the venues
+   that offer it (and, for the beach page, that sit within 1 km of the shore). */
+const VRANK={};
+VARIANTS.forEach(v=>{
+  if(!S100) return;
+  const L=ranked.filter(v.filter).sort((a,b)=>(S100.totalV(b,v.k)-S100.totalV(a,v.k))||(S100.bayes(b)-S100.bayes(a))||(b.reviews-a.reviews));   /* ties: Bayesian average, then reviews, as published */
+  VRANK[v.slug]=L;
+  const url=`${SITE}/${v.slug}/`, rb=L.findIndex(p=>p.id==='ChIJ4S2_LGIXQjER5UUCohuc8V4');
+  const top=`Top 5 for ${v.noun} on our 100-point score: ${S100.top5(L,'en',v.k)}.`;
+  page('/'+v.slug,
+    head(`${v.h1} (${NOW.getUTCFullYear()}): ${L.length} venues scored out of 100 | ${NAME}`,`${v.h1}, scored out of 100: ${S100.top5(L,'en',v.k)}.`.slice(0,300),url,'<meta name="score-variant" content="'+v.k+'">')
+    +itemList(L.slice(0,20),v.h1)
+    +nav('')
+    +`<div class="wrap"><nav class="crumb"><a href="/">Guide</a> → <span>${esc(v.h1)}</span></nav></div>
+<section class="wrap"><header class="ph"><p class="eyebrow">${L.length} venues · Google snapshot of ${human(PLACES_DATE)}</p><h1>${esc(v.h1)}</h1></header>
+<div class="ans"><p class="ans-q">${esc(v.h1)}?</p><p class="t5h">Top 5 for ${esc(v.noun)} on our 100-point score</p>${S100.top5html(L,'en',v.k)}<p class="dl">${esc(S100.dataLine('en'))}</p>
+<p>Same scale as the <a href="/best-massage-da-nang/">city ranking</a>, with one change: the ${S100.W.soins} points of the range of treatments go in full to the venues whose published menu lists ${esc(v.noun.split(' within')[0])}, and only those venues are listed${v.k==='massage_corps'?', within 1 km of the shore at My Khe':''}. English stated by the venue and confirmed in its reviews counts for 10 points, as everywhere on this guide.</p></div>
+${MX(L,'en',{limit:20,soin:v.k})}
+<h2>All ${L.length}, in order</h2>
+${list(L)}
+<p class="m">Method: <a href="/methodology/">how the 100 points are given</a>.</p>
+</section>`+footer(),'0.85',PLACES_DATE);
+});
 
 /* ---------------- METHODOLOGY ---------------- */
 page('/methodology',
@@ -233,6 +268,7 @@ ${S100?`Nine criteria, the same for every venue: Google rating weighted by its n
 ## Pages
 - Best massage in Da Nang, scored out of 100: ${SITE}/best-massage-da-nang/
 - All ${PLACES.length} venues: ${SITE}/venues/
+${VARIANTS.map(v=>`- ${v.h1}, scored out of 100: ${S100?S100.top5(VRANK[v.slug]||[],'en',v.k):''}: ${SITE}/${v.slug}/`).join('\n')}
 - Prices: ${SITE}/prices/
 ${SERVICES.map(s=>`- ${s.h1}: ${SITE}/services/${s.slug}/`).join('\n')}
 
@@ -253,3 +289,9 @@ const INDEXNOW=fs.existsSync('./indexnow-key.txt')?fs.readFileSync('./indexnow-k
 if(INDEXNOW) fs.writeFileSync(OUT+`/${INDEXNOW}.txt`,INDEXNOW);
 fs.writeFileSync(OUT+'/CNAME',DOMAIN+'\n');
 console.log(`Built ${urls.length} pages · ${PLACES.length} venues, ${AREAS.length} areas, ${STREETS.length} streets, ${SERVICES.length} treatments, ${LANGS.length} languages.`);
+
+/* Contrôle de fin de build (27/11/2026) : aucune page ne se présente comme le classement de la ville sans l'être,
+   les listes suivent la note, les pages de quartier et de rue se nomment, pas de « X, X ». Un problème = build refusé. */
+{ const PROB=require('./lib/controle.js')({OUT,ranked,S100,LISTING:{path:'/venues/'},AREAS,STREETS});
+  if(PROB.length){ console.error(PROB.slice(0,60).join('\n')); throw new Error(`controle.js : ${PROB.length} problème(s), build refusé`); }
+  console.log('controle.js : 0 problème'); }

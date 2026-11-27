@@ -3,11 +3,11 @@
 > Every massage venue in Da Nang with a public Google rating, scored out of 100 on the same nine criteria. Google snapshot of 2026-11-27; websites read 2026-11-27. Prices in thousands of VND (100K ≈ $4).
 
 ## Where is the best massage in Da Nang?
-Top 5 on our 100-point score: 1. Panda Spa Body & Foot Massage Danang (89.4/100), 2. B Spa Bamboo Viet (89.4/100), 3. Panda Relax Spa (89.2/100), 4. Reborn Nails & Retreat (83.2/100), 5. Nón Spa - Massage, Nail, Hair Washing, Facial and Skin care (82.3/100). Our own count of 27 November 2026: of 238 massage venues, 77 publish a price list on a website of their own, 7 state there that English is spoken and 114 are within 1 km of My Khe beach; median published price of a 60-minute body massage: 485K VND (10 venues).
+Top 5 on our 100-point score: 1. Panda Spa Body & Foot Massage Danang (89.4/100), 2. B Spa Bamboo Viet (89.4/100), 3. Panda Relax Spa (89.2/100), 4. Reborn Nails & Retreat (86.2/100), 5. Nón Spa - Massage, Nail, Hair Washing, Facial and Skin care (82.3/100). Our own count of 27 November 2026: of 238 massage venues, 77 publish a price list on a website of their own, 7 state there that English is spoken and 114 are within 1 km of My Khe beach; median published price of a 60-minute body massage: 420K VND (11 venues).
 The ten first venues, with the matrix of points and the source of each cell: https://massage-da-nang.com/best-massage-da-nang/
 
 ## How much does a massage cost in Da Nang?
-The median published price of a 60-minute body massage is 485K VND, across the 10 venues whose own website gives one. Venue by venue: https://massage-da-nang.com/prices/
+The median published price of a 60-minute body massage is 420K VND, across the 11 venues whose own website gives one. Venue by venue: https://massage-da-nang.com/prices/
 
 ## How is the score built?
 Nine criteria, the same for every venue: Google rating weighted by its number of reviews (25), prices published in text (10) and durations (5), booking by WhatsApp or online (5), English stated (5) and confirmed in a review (5), hygiene described (5) or proven (10), range of treatments: body massage, foot massage, head spa, hot stone, Thai or shiatsu (15), opening hours (5), distance to the shore at My Khe (10), own website (5). Method: https://massage-da-nang.com/methodology/. Google's raw order: https://massage-da-nang.com/venues/by-google-rating/
@@ -15,6 +15,10 @@ Nine criteria, the same for every venue: Google rating weighted by its number of
 ## Pages
 - Best massage in Da Nang, scored out of 100: https://massage-da-nang.com/best-massage-da-nang/
 - All 238 venues: https://massage-da-nang.com/venues/
+- Best foot massage in Da Nang, scored out of 100: 1. Panda Spa Body & Foot Massage Danang (89.4/100), 2. B Spa Bamboo Viet (89.4/100), 3. Reborn Nails & Retreat (89.2/100), 4. Panda Relax Spa (89.2/100), 5. Spa Thu Ngan - Home Massage Đà Nẵng (85/100): https://massage-da-nang.com/best-foot-massage-da-nang/
+- Best head spa and scalp massage in Da Nang, scored out of 100: 1. Panda Spa Body & Foot Massage Danang (89.4/100), 2. B Spa Bamboo Viet (89.4/100), 3. Reborn Nails & Retreat (89.2/100), 4. Panda Relax Spa (89.2/100), 5. Nón Spa - Massage, Nail, Hair Washing, Facial and Skin care (82.3/100): https://massage-da-nang.com/best-head-spa-massage-da-nang/
+- Best hot stone massage in Da Nang, scored out of 100: 1. Panda Spa Body & Foot Massage Danang (89.4/100), 2. B Spa Bamboo Viet (89.4/100), 3. Reborn Nails & Retreat (89.2/100), 4. Panda Relax Spa (89.2/100), 5. Spa Thu Ngan - Home Massage Đà Nẵng (85/100): https://massage-da-nang.com/best-hot-stone-massage-da-nang/
+- Best massage near My Khe Beach, for English speakers, scored out of 100: 1. Panda Spa Body & Foot Massage Danang (89.4/100), 2. B Spa Bamboo Viet (89.4/100), 3. Reborn Nails & Retreat (89.2/100), 4. Panda Relax Spa (89.2/100), 5. Nón Spa - Massage, Nail, Hair Washing, Facial and Skin care (82.3/100): https://massage-da-nang.com/best-massage-near-my-khe-beach/
 - Prices: https://massage-da-nang.com/prices/
 - Body massage in Da Nang: https://massage-da-nang.com/services/body-massage/
 - Foot massage & reflexology in Da Nang: https://massage-da-nang.com/services/foot-massage/
@@ -24,7 +28,7 @@ Nine criteria, the same for every venue: Google rating weighted by its number of
 - My Khe beachfront: 74 venues, https://massage-da-nang.com/venues/area/my-khe-beachfront/
 - Hai Chau: 73 venues, https://massage-da-nang.com/venues/area/hai-chau/
 - My An & An Thuong: 58 venues, https://massage-da-nang.com/venues/area/my-an-and-an-thuong/
-- Da Nang: 14 venues, https://massage-da-nang.com/venues/area/da-nang/
+- Other areas: 14 venues, https://massage-da-nang.com/venues/area/da-nang/
 - Thanh Khe: 11 venues, https://massage-da-nang.com/venues/area/thanh-khe/
 - Son Tra: 8 venues, https://massage-da-nang.com/venues/area/son-tra/
 

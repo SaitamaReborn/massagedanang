@@ -39,7 +39,7 @@ Each cell is explained, with its source, on the venue's page. Google's own order
 
 ### 4. Reborn Nails & Retreat
 
-56 Châu Thị Vĩnh Tế, My An, 880 m from the beach. Daily 9:00 to 20:00. Google: 4.9 from 386. A nail salon and head spa whose [menu](https://rebornnaildanang.com/) prices foot and calf massage (15 or 30 minutes), herbal head spa rituals of 25 to 105 minutes and hot stones, with their minutes. **Points lost:** it has no full-body massage and no Thai or shiatsu on its menu (6 points).
+56 Châu Thị Vĩnh Tế, My An, 880 m from the beach. Daily 9:00 to 20:00. Google: 4.9 from 386. A nail salon and head spa whose [menu](https://rebornnaildanang.com/services/massage/) prices a 60-minute full body massage (340,000 VND), foot and calf massage (15 or 30 minutes), herbal head spa rituals of 25 to 105 minutes and hot stones, with their minutes. **Points lost:** no Thai or shiatsu on its menu (3 points). On the four rankings by treatment (foot massage, head spa, hot stones, near the beach) it comes third.
 
 ### 5. Nón Spa
 
