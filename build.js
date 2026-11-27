@@ -73,6 +73,11 @@ const LANGS=[
  {code:"zh",path:"/zh/",native:"中文"},
  {code:"ja",path:"/ja/",native:"日本語"},
  {code:"ru",path:"/ru/",native:"Русский"},
+ {code:"it",path:"/it/",native:"Italiano"},
+ {code:"nl",path:"/nl/",native:"Nederlands"},
+ {code:"zh-tw",path:"/zh-tw/",native:"繁體中文"},
+ {code:"hi",path:"/hi/",native:"हिन्दी"},
+ {code:"ms",path:"/ms/",native:"Bahasa Melayu"},
 ];
 
 /* Price rows of the locale pages: the guide's own median, computed below. */
@@ -250,6 +255,7 @@ head(`Credits | ${NAME}`,`Where the photographs, ratings and reviews on ${NAME} 
 /* ---------------- 404, robots, llms.txt, sitemap ---------------- */
 fs.writeFileSync(OUT+'/404.html',head('Page not found | '+NAME,'That page has moved or never existed.',SITE+'/')+nav('')
  +`<section class="wrap"><header class="ph"><h1>Page not found</h1><p class="lede"><a href="/">Back to the guide</a></p></header></section>`+footer());
+fs.writeFileSync(OUT+'/BingSiteAuth.xml','<?xml version="1.0"?>\n<users>\n\t<user>8C0B02397856ABCA8EA2C6D358D4FC60</user>\n</users>\n'); /* Bing Webmaster Tools, site added by API on 27/11/2026 */
 fs.writeFileSync(OUT+'/robots.txt',`User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 fs.writeFileSync(OUT+'/llms.txt',`# ${NAME}
 

@@ -39,6 +39,11 @@ Nine criteria, the same for every venue: Google rating weighted by its number of
 - 中文: https://massage-da-nang.com/zh/
 - 日本語: https://massage-da-nang.com/ja/
 - Русский: https://massage-da-nang.com/ru/
+- Italiano: https://massage-da-nang.com/it/
+- Nederlands: https://massage-da-nang.com/nl/
+- 繁體中文: https://massage-da-nang.com/zh-tw/
+- हिन्दी: https://massage-da-nang.com/hi/
+- Bahasa Melayu: https://massage-da-nang.com/ms/
 
 ## Publisher
 WebGuard Agency (https://webguard-agency.fr). About: https://massage-da-nang.com/about/ · legal notice: https://massage-da-nang.com/legal-notice/
