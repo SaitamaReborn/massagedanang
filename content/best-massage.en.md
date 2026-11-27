@@ -17,6 +17,8 @@ The top five: {{TOP5}}.
 
 **The first three are level.** Panda Spa Body & Foot Massage and B Spa Bamboo Viet share the top score, and Panda Relax Spa is 0.2 behind: all three publish every treatment on the list with prices and minutes, take WhatsApp or online bookings, have English stated or confirmed, describe a hygiene practice and sit within 1 km of the beach. Panda Spa comes first on the tie-break, its larger number of reviews (3,183).
 
+{{PRIXMASSAGE}}
+
 ## The matrix: the ten first venues, criterion by criterion
 
 {{MATRICE:10}}

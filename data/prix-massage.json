@@ -1,0 +1,94 @@
+{
+ "note": "Prix publiés d'un massage du corps de 60 minutes (relevé du 27/11/2026, data/bareme-100.json, lignes relues). Nom du massage tel qu'écrit sur la carte. Régénérer à chaque relevé.",
+ "read": "2026-11-27",
+ "rows": [
+  {
+   "id": "ChIJC3QDqG4XQjEReUNO5eotNPA",
+   "_nom": "LOKI4 SPA DA NANG",
+   "item": "Thai Massage",
+   "dur": "60 min",
+   "price": "600K",
+   "src": "https://namu-therapy.com/loki4-spa/t/9a4026ec-abd1-4ac3-887d-2bd58962867f"
+  },
+  {
+   "id": "ChIJ7f_qq4gXQjERKFmeKUp6aqs",
+   "_nom": "Golden Lotus Oriental Organic Spa",
+   "item": "Body Massage (tinh dầu)",
+   "dur": "60 min",
+   "price": "312K",
+   "src": "https://gloospa.com/60-phut-massage-nap-nang-luong-cho-ngay-dai-tai-golden-lotus-oriental-organic-spa/"
+  },
+  {
+   "id": "ChIJ6dOY7ykYQjER0aPtP-ONTzM",
+   "_nom": "Luxury Herbal Spa",
+   "item": "Body Massage",
+   "dur": "60 min",
+   "price": "680K",
+   "src": "https://herbalspa.vn/en/best-choice-services.html"
+  },
+  {
+   "id": "ChIJm8nkB7MZQjERzYa6YqpFJH4",
+   "_nom": "Healing Hands Spa",
+   "item": "Aroma Massage",
+   "dur": "60 min",
+   "price": "350K",
+   "src": "http://healinghandsspadn.com/"
+  },
+  {
+   "id": "ChIJX-QKJKAZQjEROJETWyt2AzM",
+   "_nom": "Chua Spa",
+   "item": "Aroma Massage",
+   "dur": "60 min",
+   "price": "350K",
+   "src": "https://chuaspa.vn/"
+  },
+  {
+   "id": "ChIJ7fA2ROsZQjERuQWylV-XvDg",
+   "_nom": "Panda Spa Body & Foot Massage Danang",
+   "item": "Relaxing massage, tip included",
+   "dur": "60 min",
+   "price": "550K",
+   "src": "https://pandaspa.vn/"
+  },
+  {
+   "id": "ChIJY_JG2gAXQjERjezm3wr2NZU",
+   "_nom": "B Spa Bamboo Viet",
+   "item": "Vietnamese Traditional (body oil, acupressure)",
+   "dur": "60 min",
+   "price": "420K",
+   "src": "https://bspabambooviet.com/"
+  },
+  {
+   "id": "ChIJLXMQ9K0ZQjERkVZP1Qaqs-E",
+   "_nom": "Herbal Spa - Da Nang Branch 3",
+   "item": "Body Massage",
+   "dur": "60 min",
+   "price": "680K",
+   "src": "https://herbalspa.vn/en/best-choice-services.html"
+  },
+  {
+   "id": "ChIJCd863IIXQjERVxOP_bhh0tA",
+   "_nom": "May Healing Spa - Nourishing Head Spa & Body Massage (두피 관리 샴푸, 풋앤 바디 마사지 - 頭皮護理洗髮、足部和身體按摩)",
+   "item": "Aromatherapy Oil Massage",
+   "dur": "60 min",
+   "price": "350K",
+   "src": "https://mayhealingspa.com/en/booking/"
+  },
+  {
+   "id": "ChIJ4S2_LGIXQjER5UUCohuc8V4",
+   "_nom": "Reborn Nails & Retreat",
+   "item": "Full body massage",
+   "dur": "60 min",
+   "price": "340K",
+   "src": "https://rebornnaildanang.com/services/massage/"
+  },
+  {
+   "id": "ChIJs8RTfIMXQjERDvqeKqS7IkM",
+   "_nom": "Panda Relax Spa",
+   "item": "Relaxing massage, tip included",
+   "dur": "60 min",
+   "price": "550K",
+   "src": "https://pandaspa.vn/dich-vu"
+  }
+ ]
+}

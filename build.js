@@ -97,10 +97,11 @@ const S=buildSite({
  PRICE_NOTE:"Median of the prices published on the venues' own websites, read by the guide.",
  PROFILE_ANS_TAIL:`The full ranking of the city is on <a href="/venues/">/venues/</a>.`,
  BESTOF, LOCALES, PLACE_FILTER,
+ PRICE_TABLE:JSON.parse(fs.readFileSync('./data/prix-massage.json','utf8')),   /* 27/11 (lead): published 60-min body massage prices, with source and date */
  PAGES:[{path:"/best-massage-da-nang/",nav:"Best massage"},{path:"/prices/",nav:"Prices"},{path:"/methodology/",nav:"Method"}],
 });
 
-const {page,head,nav,footer,list,itemList,byGoogle,ranked,PLACES,PLACES_DATE,AREAS,STREETS,TODAY,urls,OUT,ord,S100,TOPL,MX,FORMULA,EXAMPLE,ANS,METHOD_EN}=S;
+const {page,head,nav,footer,list,itemList,byGoogle,ranked,PLACES,PLACES_DATE,AREAS,STREETS,TODAY,urls,OUT,ord,S100,TOPL,MX,FORMULA,EXAMPLE,ANS,METHOD_EN,PTAB}=S;
 const PUB_LD={"@type":"Organization","name":PUB.name,"url":PUB.url,"email":PUB.email};
 const prices=PLACES.map(p=>(FA[p.id]||{}).p).filter(Boolean);
 const P60=med(prices.map(x=>x.k));
@@ -131,6 +132,7 @@ head(`Massage in Da Nang: ${PLACES.length} Venues Scored Out of 100 (${NOW.getUT
 </div></div>
 <section class="wrap">
 <div class="ans"><p class="ans-q">Where is the best massage in Da Nang?</p>${ANS(BEST_ANSWER,ranked)}</div>
+${PTAB('en')}
 ${MX(ranked,'en',{limit:10})}
 <h2>The first ten</h2>
 ${list(ranked.slice(0,10))}
@@ -154,6 +156,7 @@ head(`All ${PLACES.length} Massage Venues in Da Nang, Scored Out of 100 | ${NAME
 <h1>All ${PLACES.length} massage venues in Da Nang</h1>
 </header>
 <div class="ans"><p class="ans-q">Where is the best massage in Da Nang?</p>${ANS(BEST_ANSWER,ranked)}</div>
+${PTAB('en')}
 <div class="chips">${AREAS.map(a=>`<a class="chip" href="/venues/area/${a.slug}/">${esc(a.name)}<b>${a.list.length}</b></a>`).join('')}</div>
 ${MX(ranked,'en',{limit:30})}
 ${list(ranked)}
