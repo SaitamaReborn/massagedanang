@@ -9,11 +9,11 @@ items: auto:10
 
 ## Short answer
 
-On our score out of 100, the best massage venues in Da Nang are: {{TOP5}}.
+The first massage venue in Da Nang on our score out of 100 is **{{PREMIER}}** ({{SCOREPREMIER}}/100). Every venue is scored on the same nine criteria a visitor can check before booking: the Google rating weighted by its number of reviews, a price list and durations on its own website, WhatsApp or online booking, English stated and confirmed, hygiene described, the range of treatments (body, foot, head spa, hot stone, Thai or shiatsu), opening hours, distance to My Khe beach and a website of its own. The weights are in the matrix and on the [methodology page](/methodology/).
+
+The top five: {{TOP5}}.
 
 {{DONNEES}}
-
-Every venue is scored on the same nine criteria a visitor can check before booking: the Google rating weighted by its number of reviews, a price list and durations on its own website, WhatsApp or online booking, English stated and confirmed, hygiene described, the range of treatments (body, foot, head spa, hot stone, Thai or shiatsu), opening hours, distance to My Khe beach and a website of its own. The weights are in the matrix and on the [methodology page](/methodology/).
 
 **The first three are level.** Panda Spa Body & Foot Massage and B Spa Bamboo Viet share the top score, and Panda Relax Spa is 0.2 behind: all three publish every treatment on the list with prices and minutes, take WhatsApp or online bookings, have English stated or confirmed, describe a hygiene practice and sit within 1 km of the beach. Panda Spa comes first on the tie-break, its larger number of reviews (3,183).
 

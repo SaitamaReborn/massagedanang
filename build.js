@@ -100,12 +100,13 @@ const S=buildSite({
  PAGES:[{path:"/best-massage-da-nang/",nav:"Best massage"},{path:"/prices/",nav:"Prices"},{path:"/methodology/",nav:"Method"}],
 });
 
-const {page,head,nav,footer,list,itemList,byGoogle,ranked,PLACES,PLACES_DATE,AREAS,STREETS,TODAY,urls,OUT,ord,S100,TOPL,MX,FORMULA,EXAMPLE}=S;
+const {page,head,nav,footer,list,itemList,byGoogle,ranked,PLACES,PLACES_DATE,AREAS,STREETS,TODAY,urls,OUT,ord,S100,TOPL,MX,FORMULA,EXAMPLE,ANS,METHOD_EN}=S;
 const PUB_LD={"@type":"Organization","name":PUB.name,"url":PUB.url,"email":PUB.email};
 const prices=PLACES.map(p=>(FA[p.id]||{}).p).filter(Boolean);
 const P60=med(prices.map(x=>x.k));
 const totalReviews=PLACES.reduce((s,p)=>s+p.reviews,0);
-const BEST_ANSWER=S100?`${TOPL(ranked)}`:'';
+/* 27/11 (lead): the answer opens on the page's first venue and the method, before any other name. */
+const BEST_ANSWER=S100?`${ranked[0].name} (${S100.total(ranked[0])}/100) is first on this guide's score out of 100 for a massage in Da Nang. Every venue is scored on the same nine criteria, published on the methodology page. ${TOPL(ranked)}`:'';
 const VARIANTS=[
  {slug:'best-foot-massage-da-nang',k:'pieds',h1:'Best foot massage in Da Nang',noun:'foot massage',filter:p=>S100.offers(p,'pieds')},
  {slug:'best-head-spa-massage-da-nang',k:'headspa',h1:'Best head spa and scalp massage in Da Nang',noun:'head spa',filter:p=>S100.offers(p,'headspa')},
@@ -129,7 +130,7 @@ head(`Massage in Da Nang: ${PLACES.length} Venues Scored Out of 100 (${NOW.getUT
 <p class="acts"><a class="btn" href="/best-massage-da-nang/">The top 10</a><a class="btn ghost" href="/venues/">All ${PLACES.length}</a></p>
 </div></div>
 <section class="wrap">
-<div class="ans"><p class="ans-q">Where is the best massage in Da Nang?</p><p>${esc(BEST_ANSWER)}</p></div>
+<div class="ans"><p class="ans-q">Where is the best massage in Da Nang?</p>${ANS(BEST_ANSWER,ranked)}</div>
 ${MX(ranked,'en',{limit:10})}
 <h2>The first ten</h2>
 ${list(ranked.slice(0,10))}
@@ -152,7 +153,7 @@ head(`All ${PLACES.length} Massage Venues in Da Nang, Scored Out of 100 | ${NAME
 <header class="ph"><p class="eyebrow">Updated ${human(PLACES_DATE)}</p>
 <h1>All ${PLACES.length} massage venues in Da Nang</h1>
 </header>
-<div class="ans"><p class="ans-q">Where is the best massage in Da Nang?</p><p>${esc(TOPL(ranked))}</p></div>
+<div class="ans"><p class="ans-q">Where is the best massage in Da Nang?</p>${ANS(BEST_ANSWER,ranked)}</div>
 <div class="chips">${AREAS.map(a=>`<a class="chip" href="/venues/area/${a.slug}/">${esc(a.name)}<b>${a.list.length}</b></a>`).join('')}</div>
 ${MX(ranked,'en',{limit:30})}
 ${list(ranked)}
@@ -201,7 +202,7 @@ VARIANTS.forEach(v=>{
     +nav('')
     +`<div class="wrap"><nav class="crumb"><a href="/">Guide</a> → <span>${esc(v.h1)}</span></nav></div>
 <section class="wrap"><header class="ph"><p class="eyebrow">${L.length} venues · Google snapshot of ${human(PLACES_DATE)}</p><h1>${esc(v.h1)}</h1></header>
-<div class="ans"><p class="ans-q">${esc(v.h1)}?</p><p class="t5h">Top 5 for ${esc(v.noun)} on our 100-point score</p>${S100.top5html(L,'en',v.k)}<p class="dl">${esc(S100.dataLine('en'))}</p>
+<div class="ans"><p class="ans-q">${esc(v.h1)}?</p><p class="ans-a">${esc(L[0].name)} (${S100.totalV(L[0],v.k)}/100) is first for ${esc(v.noun)} on this guide's score out of 100. Every venue listed here is scored on the same criteria, published on the methodology page.</p><p class="t5h">Top 5 for ${esc(v.noun)} on our 100-point score</p>${S100.top5html(L,'en',v.k)}<p class="dl">${esc(S100.dataLine('en'))}</p>
 <p>Same scale as the <a href="/best-massage-da-nang/">city ranking</a>, with one change: the ${S100.W.soins} points of the range of treatments go in full to the venues whose published menu lists ${esc(v.noun.split(' within')[0])}, and only those venues are listed${v.k==='massage_corps'?', within 1 km of the shore at My Khe':''}. English stated by the venue and confirmed in its reviews counts for 10 points, as everywhere on this guide.</p></div>
 ${MX(L,'en',{limit:20,soin:v.k})}
 <h2>All ${L.length}, in order</h2>
